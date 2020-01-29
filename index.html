@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Firebase Web Demo</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->           
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-storage.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Dosis:700" rel="stylesheet">
+    </head>
+
     <body>
-        <h1>Smart Room Solution</h1>
-        <p> Welcome to your smart room solution </p>
+        <script src="firebaseConfig.js"></script>
+        <script src="readWrite.js"></script>
+        
+        <h1>Royal Cloud Solutions</h1>
+        <div>
+        <p> Welcome to your smart new room solution</p>
+        <p> This is an administrators read and write test. </p>
+        </div>
+        <label for="inp" class="inp">
+            <input type="text" placeholder="&nbsp;" id = "nameField">
+            <span class="label">Identifier</span>
+            <span class="border"></span>
+        </label>
 
-        <p id="demo"></p>
-
-        <script>
-        document.getElementById("demo").innerHTML = "Do you want to see if your door is open?";
-        </script>
-
-        <script>
-        console.log("Welcome to our IoT Console!"); 
-        </script>
+        <label for="inp" class="inp">
+            <input type="text" placeholder="&nbsp;" id = "ageField">
+            <span class="label">0 (closed) or 1 (open)</span>
+            <span class="border"></span>
+        </label>
+          
+        <button onclick = "writeData()" class="brk-btn">Submit Data</button>
+        <p id = "data"></p>
+            <div><aref="https://console.firebase.google.com/u/0/project/frbasewebapprlcrowdsolutions20/database/frbasewebapprlcrowdsolutions20/data" class="underlined-a">&nbsp;&nbsp;Link To Firebase&nbsp;&nbsp;</a></div>
     </body>
 </html>

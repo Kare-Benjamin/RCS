@@ -23,18 +23,21 @@
         <p> </p>
         </div>
         <label for="inp" class="inp">
-            <input type="text" placeholder="&nbsp;" id = "nameField">
-            <span class="label">Identifier</span>
+            <input type="text" placeholder="&nbsp;" id = "identifierField">
+            <span class="label">Identifier (Door Name)</span>
             <span class="border"></span>
         </label>
 
         <label for="inp" class="inp">
-            <input type="text" placeholder="&nbsp;" id = "ageField">
+            <input type="text" placeholder="&nbsp;" id = "stateField">
             <span class="label">0 (closed) or 1 (open)</span>
             <span class="border"></span>
         </label>
           
-        <button onclick = "writeData()" class="brk-btn">Submit Data</button>
+        <div>
+            <button onclick = "writeData()" class="brk-btn">Submit Data</button>
+            <button onclick = "getData()" class="brk-btn">Refresh</button>
+        </div>
         <p id = "data"></p>
             <div><a href="https://console.firebase.google.com/u/0/project/frbasewebapprlcrowdsolutions20/database/frbasewebapprlcrowdsolutions20/data" class="underlined-a">&nbsp;&nbsp;Link To Firebase&nbsp;&nbsp;</a></div>
     </body>

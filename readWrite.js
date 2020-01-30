@@ -1,7 +1,7 @@
 function writeData() {
     firebase.database().ref("data").set({
-        name: document.getElementById("nameField").value,
-        age: document.getElementById("ageField").value
+        Identifier: document.getElementById("identifierField").value,
+        State: document.getElementById("stateField").value
     });
 
     getData();
@@ -13,7 +13,7 @@ function getData() {
         {
             var childKey = childSnapshot.key;
             var childData = childSnapshot.val();
-            document.getElementById("data").innerHTML = childData['name'] + ", " + childData['age'];
+            document.getElementById("data").innerHTML = childData['Identifier'] + ", " + childData['State'];
         })
     })
 }

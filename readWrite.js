@@ -1,7 +1,9 @@
 function writeData() {
-    firebase.database().ref("data").set({
-        Identifier: document.getElementById("identifierField").value,
-        State: document.getElementById("stateField").value
+    //firebase.database().ref("data").set({
+        firebase.database().ref("Test").set({
+        //Identifier: document.getElementById("identifierField").value,
+        //State: document.getElementById("stateField").value
+        State: document.getElementById("Arnes").value
     });
 
     getData();
@@ -13,7 +15,8 @@ function getData() {
         {
             var childKey = childSnapshot.key;
             var childData = childSnapshot.val();
-            document.getElementById("data").innerHTML = childData['Identifier'] + ", " + childData['State'];
+            //document.getElementById("data").innerHTML = childData['Arnes'] + ", " + childData['State'];
+            document.getElementById("Test").innerHTML = childData['Arnes'];
         })
     })
 }
